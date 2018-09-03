@@ -1,0 +1,73 @@
+.topbarlist{
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+
+.mainlistlogo{
+  text-align: left;
+  padding: 10px 1rem;
+}
+
+.mainlist{
+  padding: 10px 1rem;
+  border: none;
+  width: auto;
+}
+
+
+#links{
+  height: 30vh;
+}
+
+.outnow{
+  margin: 15px;
+  font-size: 1rem;
+  padding: 0.4rem 1rem;
+}
+
+.outnowhead{
+  font-size: 2rem;
+}
+
+#merch{
+  height: 75vh;
+}
+
+.band{
+  font-size: 2rem;
+}
+
+.merchphoto{
+  width: 33%;
+  padding: 2rem;
+}
+
+#instagramfeed{
+  height:90vh;
+}
+
+#instaheader{
+  text-align:center;
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+#instafeed{
+  padding: 1rem;
+  width: 90%;
+}
+
+.instaanchor{
+  padding: 1rem;
+  width: 25%;
+}
+
+
+#footer{
+  height: 15vh;
+}
+
+.footerlistitem{
+  margin: 0 3rem;
+  font-size: 1rem;
+}

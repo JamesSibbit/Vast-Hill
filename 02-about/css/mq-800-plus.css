@@ -1,0 +1,34 @@
+.topbarlist{
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+
+.mainlistlogo{
+  text-align: left;
+  padding: 10px 1rem;
+}
+
+.mainlist{
+  padding: 10px 1rem;
+  border: none;
+  width: auto;
+}
+
+article{
+  flex-flow: row wrap;
+  align-content: center;
+  align-items: center;
+}
+
+.biography{
+  order: 1;
+  padding: 1rem;
+  font-size: 1.6rem;
+  width: 50%;
+}
+
+.shirtlogo{
+  order: 2;
+  padding: 1rem;
+  width: 50%;
+}

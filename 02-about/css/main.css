@@ -1,0 +1,60 @@
+body{
+  font-family: 'Righteous', cursive;
+  /* background-color: black; */
+}
+
+.topbarlist{
+  background-color: rgba(255,0,208,0.9);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  font-size: 1.3rem;
+}
+.mainlistlogo{
+  padding: 3px 1rem;
+  width: 100%;
+}
+
+.mainlist{
+  list-style: none;
+  padding: 2px 0.3rem;
+  width: 100%;
+  transition: all 1s ease;
+}
+.mainlist:hover{
+  border: 0.01px solid royalblue;
+  border-radius: 10px;
+  background-color: royalblue;
+}
+
+a{
+  text-decoration: none;
+}
+
+article{
+  height: 100vh;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  align-items: center;
+}
+
+.biography{
+  padding: 0 1rem 1rem 1rem;
+  text-align: center;
+  order: 5;
+  font-size: 1rem;
+  padding: 1rem;
+  color: black;
+  width: 100%;
+}
+
+.shirtlogo{
+  padding: 3rem 0 1rem 1rem;
+  width: 100%;
+}
