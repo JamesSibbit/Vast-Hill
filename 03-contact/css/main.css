@@ -1,7 +1,16 @@
 body{
+  min-height: 100%;
   font-family: 'Righteous', cursive;
   /* background-color: black; */
+  background-image: url("../../01-main-page/images/VastHillLogo Color.png");
+  background-color: #9fdee0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: border-box;
+  background-position: center;
+  background-attachment: fixed;
 }
+
 
 .topbarlist{
   background-color: rgba(239,171,236,0.95);
@@ -29,10 +38,10 @@ body{
 }
 
 .mainlist:hover{
+  cursor: pointer;
   border: 0.01px solid royalblue;
   border-radius: 10px;
   background-color: royalblue;
-  cursor: pointer;
 }
 
 .mainlistlogo:hover{
@@ -104,31 +113,49 @@ input[type="checkbox"]:checked~#flyinmenu{
   background-color: royalblue;
 }
 
-article{
-  height: 100vh;
+.contact{
+  height: 80vh;
+  margin-top: 2rem;
   display: flex;
-  flex-flow: row wrap;
-  align-content: center;
+  justify-content: center;
   align-items: center;
+  flex-flow: column nowrap;
 }
 
-.biography{
-  padding: 0 1rem 1rem 1rem;
-  text-align: center;
-  order: 5;
-  font-size: 1rem;
-  padding: 1rem;
-  color: black;
+.intro{
   width: 100%;
+  font-size: 2rem;
+  padding: 2rem;
 }
 
-.shirtlogo{
-  padding: 3rem 0 1rem 1rem;
+.email{
   width: 100%;
+  font-size: 1.5rem;
+  padding: 1.5rem;
+}
+
+.emailhref{
+  text-decoration: underline;
+}
+
+.emailhref:link{
+  color: blue;
+}
+
+.emailhref:hover{
+  color: red;
+}
+
+.phone{
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 1.5rem;
 }
 
 #footer{
-  margin: 3rem 0 0 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
   background-color: rgba(239,171,236,0.95);
   list-style: none;
   padding: 0;

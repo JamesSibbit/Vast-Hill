@@ -4,18 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/sibbit-reset.css">
+  <link rel="stylesheet" href="/Users/jamessibbit/vast-hill/sibbit-reset.css">
   <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/mq-800-plus.css" media="(min-width:800px)">
   <link href="/Users/jamessibbit/Documents/font-awesome/css/all.css" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#000000">
+  <link rel="shortcut icon" href="favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#000000">
+  <meta name="msapplication-config" content="favicon/browserconfig.xml">
+  <meta name="theme-color" content="#000000">
   <title>Vast Hill</title>
 </head>
 <body>
-  <header>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" style="display:none;">
+    <symbol id="bars" viewBox="0 0 100 100">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg>
+    </symbol>
+  </svg>
+
+  <header class="topbarheader">
     <nav id="mainmenu">
       <ul class="topbarlist">
-        <li class="mainlistlogo">VAST HILL</li>
+        <li class="mainlistlogo">
+          <label for="menuflyout" class="mainlistlogo">
+            <svg style="width:1rem; height: 1rem;"><use xlink:href="#bars"></use></svg>
+            VAST HILL
+          </label>
+        </li>
         <a href="/Users/jamessibbit/vast-hill/01-main-page/index.html"><li class="mainlist"><i class="fas fa-home"></i></li></a>
         <a href="https://soundcloud.com/vasthill85" target="_blank"><li class="mainlist"><i class="fab fa-soundcloud"></i></li></a>
         <a href="https://www.youtube.com/channel/UCBpaAjim2r-KOJ4yNW6oaFg" target="_blank"><li class="mainlist"><i class="fab fa-youtube"></i></li></a>
@@ -23,13 +43,41 @@
         <a href="https://open.spotify.com/artist/1ZRvJj1oxjypOuwoTrWw8V" target="_blank"><li class="mainlist"><i class="fab fa-spotify"></i></li></a>
         <a href="https://www.instagram.com/vasthill/" target="_blank"><li class="mainlist"><i class="fab fa-instagram"></i></li></a>
         <a href="https://www.facebook.com/vasthillmusic" target="_blank"><li class="mainlist"><i class="fab fa-facebook"></i></li></a>
-        <a href="#" target="_blank"><li class="mainlist"><i class="fas fa-address-book"></i></li></a>
+        <a href="/Users/jamessibbit/vast-hill/03-contact/index.html">
+          <li class="mainlist"><i class="fas fa-address-book"></i></li>
+        </a>
       </ul>
     </nav>
   </header>
 
+  <input type="checkbox" id="menuflyout">
+  <section id="flyinmenu">
+    <label for="menuflyout" id="close">X</label>
+    <nav id="flyinnav">
+      <a href="../02-about/index.html"  class="flyinopt">
+        <div>
+          ABOUT
+        </div>
+      </a>
+      <a href="../03-contact/index.html" class="flyinopt">
+        <div>CONTACT</div>
+      </a>
+      <a href="../04-videos/index.html" class="flyinopt">
+        <div>VIDEOS</div>
+      </a>
+    </nav>
+  </section>
+
   <section id="mainpage">
     <iframe id="apollovid" src="https://www.youtube.com/embed/-4tLc0N222Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </section>
+
+  <section id="gigs">
+    <h1 class="upcoming">UPCOMING GIGS:</h1>
+    <h2 class="nc">NIGHT CRUISE VOL.2, SEPT. 29TH. CLICK BELOW FOR TICKETS:</h2>
+    <a class="nightcruise" href="https://www.moshtix.com.au/v2/event/night-cruise-vol-2-featuring-fluir-froyo-tilda-and-vast-hill/106578" target="_blank">
+      <img class="nightcruiseimg" src="images/night-cruise.jpg" alt="Night Cruise">
+    </a>
   </section>
 
   <section id="links">
@@ -67,7 +115,7 @@
         limit: 8,
         userId: '2175560482',
         accessToken: '2175560482.1677ed0.d273c55b5a7f47358fec75fd806e8b37',
-        template: '<a href="{{link}}" class="instaanchor"><img class="instapictures" src="{{image}}" width="90%" height="90%" orientation="square"/></a>',
+        template: '<a href="{{link}}" class="instaanchor" target="_blank"><img class="instapictures" src="{{image}}" width="90%" height="90%" orientation="square"/></a>',
         links: true,
         resolution: 'standard_resolution'
     });
@@ -85,10 +133,13 @@
         <a class="footerlistitem" href="#mainpage">
           <li>Back to top</li>
         </a>
-        <a class="footerlistitem" href="/Users/jamessibbit/vast-hill/02-about/index.html">
+        <a class="footerlistitem" href="../02-about/index.html">
           <li>About</li>
         </a>
-        <a class="footerlistitem" href="#">
+        <a class="footerlistitem" href="../04-videos/index.html">
+          <li>Videos</li>
+        </a>
+        <a class="footerlistitem" href="../03-contact/index.html">
           <li>Contact us</li>
         </a>
       </ul>
