@@ -16,24 +16,41 @@ body{
 }
 
 .topbarheader{
-  animation-name: top-bar-slide;
-  animation-duration: 2s;
-  animation-timing-function: ease;
-  animation-iteration-count: 1;
-  animation-play-state: running;
+  -webkit-animation-name: top-bar-slide;
+          animation-name: top-bar-slide;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+@-webkit-keyframes top-bar-slide {
+  0% {-webkit-transform: translateY(-4rem);transform: translateY(-4rem);}
+  100% {-webkit-transform: translateY(-0.5rem);transform: translateY(-0.5rem);}
 }
 
 @keyframes top-bar-slide {
-  0% {transform: translateY(-4rem);}
-  100% {transform: translateY(-0.5rem);}
+  0% {-webkit-transform: translateY(-4rem);transform: translateY(-4rem);}
+  100% {-webkit-transform: translateY(-0.5rem);transform: translateY(-0.5rem);}
 }
 
 .topbarlist{
   background-color: rgba(239,171,236,0.95);
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   text-align: center;
   position: fixed;
   width: 100%;
@@ -44,6 +61,7 @@ body{
 .mainlistlogo{
   padding: 3px 1rem;
   width: 100%;
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
@@ -55,6 +73,7 @@ body{
   list-style: none;
   padding: 2px 0.3rem;
   width: 100%;
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
@@ -86,12 +105,21 @@ input[type="checkbox"]{
   position: fixed;
   top: 2.5%;
   left: -100rem;
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: 4px groove royalblue;
   border-radius: 10px;
+  -webkit-box-shadow: 0.5rem 0.5rem 0.8rem black;
+          box-shadow: 0.5rem 0.5rem 0.8rem black;
 }
 
 input[type="checkbox"]:checked~#flyinmenu{
@@ -103,6 +131,7 @@ input[type="checkbox"]:checked~#flyinmenu{
   top: 1rem;
   left: 1rem;
   font-size: 3rem;
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
@@ -112,10 +141,19 @@ input[type="checkbox"]:checked~#flyinmenu{
 }
 
 #flyinnav{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .flyinopt{
@@ -127,6 +165,7 @@ input[type="checkbox"]:checked~#flyinmenu{
   color: white;
   padding: 1.5rem 4rem;
   text-align: center;
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
@@ -136,10 +175,16 @@ input[type="checkbox"]:checked~#flyinmenu{
 
 #mainpage{
   font-size: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 100vh;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 
@@ -150,14 +195,25 @@ input[type="checkbox"]:checked~#flyinmenu{
 
 #gigs{
   height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 .upcoming{
-  flex: 1 1 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   text-align: center;
   width: 100%;
   margin: 1rem;
@@ -165,7 +221,9 @@ input[type="checkbox"]:checked~#flyinmenu{
 }
 
 .nc{
-  flex: 1 1 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   text-align: center;
   width: 100%;
   font-size: 1.4rem;
@@ -173,32 +231,50 @@ input[type="checkbox"]:checked~#flyinmenu{
 }
 
 .nightcruise{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 70%;
   padding: 1rem 1rem 4rem 1rem;
   margin-bottom: 2rem;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .nightcruiseimg{
-  flex: 1 1 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   width: 100%;
   height: 100%;
 }
 
 .nightcruiseimg:hover{
   opacity:0.5;
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
 #links{
   height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .outnowhead{
@@ -209,9 +285,16 @@ input[type="checkbox"]:checked~#flyinmenu{
 }
 
 .outnownav{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
 }
 
@@ -223,6 +306,7 @@ input[type="checkbox"]:checked~#flyinmenu{
   padding: 0.2rem 0.4rem;
   margin: 5px;
   width: 25%;
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
@@ -232,10 +316,19 @@ input[type="checkbox"]:checked~#flyinmenu{
 }
 
 #about{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 
 }
 
@@ -247,8 +340,12 @@ input[type="checkbox"]:checked~#flyinmenu{
 }
 
 .aboutanchor{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   padding: 1rem 1rem 4rem 1rem;
 }
@@ -260,15 +357,25 @@ input[type="checkbox"]:checked~#flyinmenu{
 
 .headerimage:hover{
   opacity:0.5;
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
 #merch{
   height: 40vh;
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #mercharticle{
@@ -288,6 +395,7 @@ input[type="checkbox"]:checked~#flyinmenu{
 
 .merchphotoinner:hover{
   opacity:0.5;
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
@@ -295,21 +403,35 @@ input[type="checkbox"]:checked~#flyinmenu{
   padding: 0.4rem;
   width: 90%;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .instaanchor{
   padding: 0.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 50%;
 }
 
 .instapictures:hover{
   opacity:0.5;
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
@@ -320,18 +442,29 @@ input[type="checkbox"]:checked~#flyinmenu{
   list-style: none;
   padding: 0;
   width: 100%;
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
   color: white;
   height: 15vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .footerlist{
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 1rem auto;
 }
 
@@ -346,6 +479,7 @@ input[type="checkbox"]:checked~#flyinmenu{
 }
 
 .footerlistitem:hover{
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
   background-color: royalblue;
 }
