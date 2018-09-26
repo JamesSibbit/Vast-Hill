@@ -16,7 +16,6 @@ body{
 }
 
 .topbarheader{
-  -webkit-animation-name: top-bar-slide;
           animation-name: top-bar-slide;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
@@ -105,7 +104,6 @@ input[type="checkbox"]{
   position: fixed;
   top: 2.5%;
   left: -100rem;
-  -webkit-transition: all 1s ease;
   transition: all 1s ease;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -256,63 +254,6 @@ input[type="checkbox"]:checked~#flyinmenu{
   opacity:0.5;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
-}
-
-#links{
-  height: 20vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
-
-.outnowhead{
-  text-align: center;
-  width: 100%;
-  font-size: 1.6rem;
-  padding: 1rem;
-}
-
-.outnownav{
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-}
-
-.outnow{
-  text-align: center;
-  border: 1px black solid;
-  border-radius: 4px;
-  list-style: none;
-  padding: 0.2rem 0.4rem;
-  margin: 5px;
-  width: 25%;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-}
-
-.outnow:hover{
-  background-color: black;
-  color: white;
 }
 
 #about{
