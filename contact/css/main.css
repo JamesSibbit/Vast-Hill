@@ -1,8 +1,9 @@
+
 body{
   min-height: 100%;
   font-family: 'Righteous', cursive;
   /* background-color: black; */
-  background-image: url("../../01-main-page/images/VastHillLogo Color.png");
+  background-image: url("../../main-page/images/VastHillLogo Color.png");
   background-color: #9fdee0;
   background-repeat: no-repeat;
   background-size: contain;
